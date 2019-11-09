@@ -1,10 +1,7 @@
 node {
+    sh 'gradlew build'
     stage('build') {
     }
-    tools {
-        gradle "mygradle"
-    }
-
     stage('deploy') {
         sh 'gradlew build'
 //         slackSend color: '#BADA55', message: 'Hello, World!', channel: '#jenkins-slack-test'
