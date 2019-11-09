@@ -1,3 +1,8 @@
+buildscript {
+    dependencies {
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2"
+    }
+}
 plugins {
     id 'org.springframework.boot' version '2.1.8.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
@@ -16,7 +21,7 @@ apply plugin: "org.sonarqube"
 
 sonarqube {
     properties {
-        property "soanr.projectKey", "ksy_sample01"
+        property "sonar.projectKey", "ksy_sample01"
         property "sonar.sources", "src"
     }
 }
