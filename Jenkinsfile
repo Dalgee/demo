@@ -5,6 +5,7 @@ node {
     stage('deploy') {
         sh "echo ${BRANCH} >> /root/build.out"
         sh "echo ${BRANCH_NAME} >> /root/build.out"
+        sh "echo '9999999999' >> /root/build.out"
         sh 'gradlew build'
 //         slackSend color: '#BADA55', message: 'Hello, World!', channel: '#jenkins-slack-test'
 //                 def scannerHome = tool 'id-bank'
