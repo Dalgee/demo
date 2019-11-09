@@ -12,6 +12,15 @@ repositories {
     mavenCentral()
 }
 
+apply plugin: "org.sonarqube"
+
+sonarRunner {
+    properties {
+        property "soanr.projectKey", "ksy_sample01"
+        property "sonar.sources", "src"
+    }
+}
+
 dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.10")
     implementation 'org.springframework.boot:spring-boot-starter'
