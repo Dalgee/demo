@@ -14,7 +14,7 @@ repositories {
 
 apply plugin: "org.sonarqube"
 
-sonarRunner {
+sonarqube {
     properties {
         property "soanr.projectKey", "ksy_sample01"
         property "sonar.sources", "src"
