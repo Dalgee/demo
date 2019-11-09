@@ -3,7 +3,7 @@ node {
     }
 
     stage('deploy') {
-        sh './gradlew build'
+        sh 'gradlew build'
         sh "echo ${BUILD_URL} >> /root/jenkins.out"
         sh "echo ${JOB_URL} >> /root/jenkins.out"
         sh "echo ${JENKINS_HOME} >> /root/jenkins.out"
