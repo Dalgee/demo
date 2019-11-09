@@ -12,7 +12,7 @@ node {
                     def sonar_cli = """
                     ${scannerHome}/bin/sonar-scanner
                     -Dsonar.projectKey=ksy_sample01
-                    -Dsonar.sources='src'
+                    -Dsonar.sources=.
                     """
                     sh sonar_cli.replaceAll('\n', ' ')
                 }
