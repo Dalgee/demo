@@ -7,7 +7,7 @@ node {
 
         sh "echo 'deploying...' >> /root/jenkins.out"
 //         slackSend color: '#BADA55', message: 'Hello, World!', channel: '#jenkins-slack-test'
-                def scannerHome = tool 'sonarqube-scanner 이름';
+                def scannerHome = tool 'idbank'
                 withSonarQubeEnv('idbank01') {
                     def sonar_cli = """
                     ${scannerHome}/bin/sonar-scanner
