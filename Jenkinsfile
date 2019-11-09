@@ -1,5 +1,4 @@
 node {
-    sh 'gradlew build'
     stage('build') {
     }
     stage('deploy') {
