@@ -1,9 +1,6 @@
 node {
     stage('build') {
     }
-    tools {
-        gradle '4.10'
-    }
 
     stage('deploy') {
         sh './gradlew build'
